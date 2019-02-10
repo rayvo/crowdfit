@@ -43,12 +43,7 @@ export class EditProfilePage implements OnInit {
     if (this.userID) {
       this.loadUser()
       console.log("TAEYU-" + "USERID")
-    } else {
-      this.userID = 'Y0nKsthi7aeLij4SZS7dv1wRogk1'
-      console.log("TAEYU-" + "NO USERID")
-
-      this.loadUser()
-    }
+    } 
   }
 
   async loadUser() {
