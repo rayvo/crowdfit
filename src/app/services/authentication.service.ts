@@ -40,6 +40,7 @@ export class AuthenticationService {
   }
 
   login() {
+    console.log("TAEYU11")
     return this.storage.set(TOKEN_KEY, 'Taeyu Im 19831210').then(() => {
       this.authenticationState.next(true);
     });

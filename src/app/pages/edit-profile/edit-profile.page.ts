@@ -42,7 +42,7 @@ export class EditProfilePage implements OnInit {
     //this.userID = this.route.snapshot.params['id']
     if (this.userID) {
       this.loadUser()
-      console.log("TAEYU-" + "USERID")
+      console.log("TAEYU-" + this.user)
     } 
   }
 

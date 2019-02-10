@@ -72,17 +72,20 @@ export class DashboardPage implements OnInit {
     this.menuCtrl.enable(true);    
   }
   ngOnInit() {
+    console.log("dashboard:" + this.afAuth.auth.currentUser)
     if (this.afAuth.auth.currentUser) {
       const currentUser = this.afAuth.auth.currentUser
       this.userID = currentUser.uid
+      console.log("dashboard:" + this.userID)
+      if (this.userID) {
+        this.loadUser()
+        console.log("dashboard: name=" + this.user.name)
+      } 
     } else {
-      console.log("app.component:" + "currentUser NO")
+      console.log("dashboard: none user loaded")
     }
 
-    if (this.userID) {
-      this.loadUser()
-      console.log("TAEYU-" + "USERID")
-    } 
+    
   }
 
   async loadUser() {

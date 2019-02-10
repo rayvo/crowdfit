@@ -10,24 +10,24 @@
             </ion-avatar>
             <ion-label>
               <ion-text color="medium">
-                <h1><strong>Taeyu Im</strong></h1>
+                <h1><strong>{{user.name}}</strong></h1>
               </ion-text>
               <ion-text color="secondary">
                 <h3>
-                  Incheon, Korea
+                  {{user.usertype}}
                 </h3>
               </ion-text>
               <ion-menu-toggle class="mto" auto-hide="false">
                 <a class="text08" tappable (click)="goToEditProgile()">
                   <ion-text color="medium">
                     <ion-icon name="contact"></ion-icon>
-                    <strong>edit profile</strong>
+                    <strong>Edit</strong>
                   </ion-text>
                 </a> <ion-text color="secondary"> | </ion-text> 
                 <a class="text08" tappable (click)="logout()">
                   <ion-text color="medium">
                     <ion-icon name="log-out"></ion-icon>
-                    <strong>logout</strong>
+                    <strong>Logout</strong>
                   </ion-text>
                 </a>
               </ion-menu-toggle>
