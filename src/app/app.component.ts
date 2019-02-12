@@ -100,7 +100,7 @@ export class AppComponent {
     this.userService.getUser(this.userID).subscribe(res => {
       loading.dismiss();
       this.user = res;
-      if (this.user.usertype==='Admin') {
+      if (this.user.usertype==='관리자') {
         this.appPages = [                    
           {
             title: 'Admin Home',
