@@ -63,12 +63,13 @@ export class RegisterPage implements OnInit {
     this.newUser.usertype='회원'
     this.authService.signupUser(this.newUser.email, this.newUser.password, this.newUser.name, this.newUser.phone, this.newUser.usertype)
     const loader = await this.loadingCtrl.create({
-      duration: 2000
+      duration: 1000
     });
 
     loader.present();
     loader.onWillDismiss().then(() => {
-      this.navCtrl.navigateRoot('/home-results');
+      this.showAlert("Success!", "Welcome aboard!")
+      this.navCtrl.navigateRoot('/');
     });
   }
 
@@ -76,4 +77,16 @@ export class RegisterPage implements OnInit {
   goToLogin() {
     this.navCtrl.navigateRoot('/');
   }
+
+
+  async showAlert(header: string, message: string) {
+    const msgBox = await this.alert.create({
+      header,
+      message,
+      buttons: ['OK']
+    })
+
+    await msgBox.present()
+  }
+
 }
