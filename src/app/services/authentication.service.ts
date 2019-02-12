@@ -53,7 +53,12 @@ export class AuthenticationService {
 
 
   loginUser(email: string, password: string): Promise<firebase.auth.UserCredential> {
-    return firebase.auth().signInWithEmailAndPassword(email, password);
+    return firebase.auth().signInWithEmailAndPassword(email, password)
+          .then()
+          .catch(error => {
+            console.error(error);
+            throw new Error(error);
+          });
   }
 
   logoutUser(): Promise<void> {
