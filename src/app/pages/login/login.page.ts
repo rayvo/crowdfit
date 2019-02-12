@@ -95,7 +95,6 @@ export class LoginPage implements OnInit {
     this.loginInfo = this.onLoginForm.value
     this.authService.loginUser(this.loginInfo.email, this.loginInfo.password).then(res => {
       this.authService.login()
-      //this.navCtrl.navigateRoot('/edit-profile');
     })
     
     const loader = await this.loadingCtrl.create({
