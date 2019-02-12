@@ -40,7 +40,6 @@ export class AuthenticationService {
   }
 
   login() {
-    console.log("TAEYU11")
     return this.storage.set(TOKEN_KEY, 'Taeyu Im 19831210').then(() => {
       this.authenticationState.next(true);
     });
@@ -65,7 +64,7 @@ export class AuthenticationService {
     return firebase.auth().sendPasswordResetEmail(email);
   }
 
-  signupUser(email: string, password: string, name: string, phone: string): Promise<any> {
+  signupUser(email: string, password: string, name: string, phone: string, usertype: string): Promise<any> {
     return firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
@@ -73,7 +72,7 @@ export class AuthenticationService {
         firebase
           .firestore()
           .doc(`/users/${newUserCredential.user.uid}`)
-          .set({ name, email, phone });
+          .set({ name, email, phone, usertype });
       })
       .catch(error => {
         console.error(error);

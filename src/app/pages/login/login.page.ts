@@ -94,11 +94,8 @@ export class LoginPage implements OnInit {
   async goToHome() {
     this.loginInfo = this.onLoginForm.value
     this.authService.loginUser(this.loginInfo.email, this.loginInfo.password).then(res => {
-      console.log("TAEYU12")
       this.authService.login()
-      console.log("TAEYU13")
       //this.navCtrl.navigateRoot('/edit-profile');
-      console.log("TAEYU14")
     })
     
     const loader = await this.loadingCtrl.create({

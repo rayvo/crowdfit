@@ -60,7 +60,8 @@ export class RegisterPage implements OnInit {
 
   async signUp() {
     this.newUser = this.onRegisterForm.value
-    this.authService.signupUser(this.newUser.email, this.newUser.password, this.newUser.name, this.newUser.phone)
+    this.newUser.usertype='회원'
+    this.authService.signupUser(this.newUser.email, this.newUser.password, this.newUser.name, this.newUser.phone, this.newUser.usertype)
     const loader = await this.loadingCtrl.create({
       duration: 2000
     });

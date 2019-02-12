@@ -19,4 +19,5 @@ export interface NewAccount {
   email: string;
   password: string;
   phone: string;
+  usertype: string;
 }

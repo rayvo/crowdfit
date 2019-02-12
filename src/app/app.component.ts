@@ -70,11 +70,12 @@ export class AppComponent {
   }
 
   initializeApp() {
+    console.log("initializeApp()")
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
       this.authenticationService.authenticationState.subscribe(state => {
-        console.log("TAEYU1")
+        console.log("TAEYU-state=" + state)
         if (state) {
           console.log("TAEYU2")
           if (this.afAuth.auth.currentUser) {

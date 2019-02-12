@@ -1,10 +1,10 @@
 const config ={
-    apiKey: "AIzaSyCuxNabayBPMYxhlWHa8QRy_e1yUsmKggk",
-    authDomain: "clubfit-fd01b.firebaseapp.com",
-    databaseURL: "https://clubfit-fd01b.firebaseio.com",
-    projectId: "clubfit-fd01b",
-    storageBucket: "clubfit-fd01b.appspot.com",
-    messagingSenderId: "1027745173003"
-}
+    apiKey: "AIzaSyCFFZOyN4ofd-5dTIAH2j36vIE31l-3LpM",
+    authDomain: "crowdfit-cdad3.firebaseapp.com",
+    databaseURL: "https://crowdfit-cdad3.firebaseio.com",
+    projectId: "crowdfit-cdad3",
+    storageBucket: "crowdfit-cdad3.appspot.com",
+    messagingSenderId: "472655484522"
+} //crowdfit.manager
 
 export default config
