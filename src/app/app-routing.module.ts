@@ -13,8 +13,14 @@ const routes: Routes = [
   {
     path: 'members',
     canActivate: [AuthGuardService],
-    loadChildren: './pages/members/member-routing.module#MemberRoutingModule'
-  }
+    loadChildren: './pages/members/tabs/tabs.module#TabsPageModule'
+  },
+  // {
+  //   path: 'members',
+  //   canActivate: [AuthGuardService],
+  //   loadChildren: './pages/members/member-routing.module#MemberRoutingModule'
+  // },
+  
 ];
 
 @NgModule({

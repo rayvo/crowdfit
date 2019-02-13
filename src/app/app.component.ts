@@ -144,7 +144,8 @@ export class AppComponent {
         ];
           
       }
-      this.router.navigate(['members', 'dashboard']);
+      // this.router.navigate(['members', 'dashboard']);
+      this.router.navigate(['members','tabs']);
     })
   }
   goToEditProgile() {
