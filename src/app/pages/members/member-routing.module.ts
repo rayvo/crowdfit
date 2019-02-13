@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardPageModule' },
+  // { path: 'tabCard', loadChildren: './tabCard/tabCard.module#TabCardPageModule' },
 ];
 
 @NgModule({
