@@ -47,7 +47,7 @@ export class AppComponent {
     this.appPages = [
       {
         title: 'Home',
-        url: '/home-results',
+        url: '/members',
         direct: 'root',
         icon: 'home'
       },
@@ -104,7 +104,7 @@ export class AppComponent {
         this.appPages = [                    
           {
             title: 'Admin Home',
-            url: '/members',
+            url: '/members/tabs/dashboard',
             direct: 'root',
             icon: 'home'
           },
@@ -125,7 +125,7 @@ export class AppComponent {
         this.appPages = [
           {
             title: 'Member Home',
-            url: '/members',
+            url: '/members/tabs/dashboard',
             direct: 'root',
             icon: 'home'
           },
