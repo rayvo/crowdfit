@@ -25,7 +25,7 @@ export class DashboardPage implements OnInit {
     address: '',
     usertype: '',
     birthday: '',
-    photoURL: ''
+    avatar: ''
   }
   userID = null
 

@@ -6,7 +6,7 @@ export interface User {
   address: string,
   usertype: string,
   birthday: string,
-  photoURL?: string;
+  avatar?: string;
 }
 
 export interface EmailPasswordPair {

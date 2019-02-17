@@ -4,7 +4,6 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/modals/user';
 
-
 @Component({
   selector: 'app-edit-profile',
   templateUrl: './edit-profile.page.html',
@@ -20,7 +19,7 @@ export class EditProfilePage implements OnInit {
     address: '',
     usertype: '',
     birthday: '',
-    photoURL: ''
+    avatar: ''
   }
   userID = null
   constructor(
@@ -73,6 +72,8 @@ export class EditProfilePage implements OnInit {
       })
     }
   }
+
+
 
   async sendData1() {
     const loader = await this.loadingCtrl.create({

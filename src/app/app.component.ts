@@ -28,7 +28,7 @@ export class AppComponent {
     address: '',
     usertype: '',
     birthday: '',
-    photoURL: ''
+    avatar: ''
   }
   userID = null
 
